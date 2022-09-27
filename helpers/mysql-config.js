@@ -1,11 +1,11 @@
 const config = {
     
     connectionLimit : 100,
-    host: 'metaversedb.cubbpk8g1fcx.us-east-1.rds.amazonaws.com', //db-meta.coikvaadq6ut.us-east-1.rds.amazonaws.com
-    user : 'admin', //admin
+    host: 'bancodealimentosdb.c9k4qkxktz6x.us-east-1.rds.amazonaws.com', //db-meta.coikvaadq6ut.us-east-1.rds.amazonaws.com
+    user : 'root', //admin
     
-    password : 'BlackJack-02', //rootroot
-    database : 'metaverse', //metaverse
+    password : 'Cat-060122', //rootroot
+    database : 'BancoDeAlimentos', //metaverse
     debug : false
 
     /* 
