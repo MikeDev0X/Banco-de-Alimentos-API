@@ -41,9 +41,7 @@ module.exports.login = (req, res) => {
             if (error)
                 res.send(error);
             else {
-                //console.log(results[0]); //undefined
 
-                //console.log(results[0]);
                 if (results[0] != undefined) {
 
                     resultUser = results[0];
@@ -64,18 +62,10 @@ module.exports.login = (req, res) => {
                                 .update(pwd)
                                 .digest('hex');
 
-                                console.log("pwd: ");
-                                console.log(pwd);   
-
                             if (resultUser != undefined) {
                                 console.log(resultPassword);
 
-                                console.log("hexed password: ");
-                                console.log(resultPassword);
-
-
                                 if (resultPassword === pwd) {
-                                    console.log("truee");
                                     token = jwt.sign(payload, config.key, { expiresIn: 7200 })
                                     mensaje = 'Usuario o contraseña autenticados'
 
@@ -91,7 +81,6 @@ module.exports.login = (req, res) => {
                     })
 
                 } else {
-                    console.log("kiti");
                     res.json({
                         mensaje
                     })

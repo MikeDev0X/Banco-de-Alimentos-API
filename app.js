@@ -3,6 +3,7 @@ const res = require('express/lib/response');
 const config = require('./config/jwt');
 const signUp = require('./routes/signUp');
 const login = require('./routes/login');
+const survey = require('./routes/survey')
 
 
 const multer = require('multer');
@@ -24,6 +25,7 @@ app.set("key", config.key);
 
 app.use('/', signUp)
 app.use('/', login)
+app.use('/',survey)
 
 
 //Función callback -> función que se ejecuta como respuesta a un evento o acción
